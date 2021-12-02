@@ -1,0 +1,65 @@
+.PageWrapper {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderWrapper {
+    border-bottom: 1px solid orange;
+    padding: 5px 25px;
+}
+
+.Header nav a {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+.Header nav a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  
+.Form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.Form input {
+    margin-bottom: 30px;
+    padding: 10px 5px;
+}
+
+.Error {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.Post {
+    border: 1px solid orange;
+    display: flex;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.PostImage {
+    flex-basis: 50%;
+}
+
+.PostText {
+    flex-basis: 50%;
+    padding-left: 40px;
+}

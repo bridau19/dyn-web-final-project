@@ -1,8 +1,8 @@
 import React from "react";
 
-function Signup() {
+function AddPost() {
     return (
-        <div>
+        <div className="PageWrapper">
             <h1>Add Post</h1>
         </div>
     )
