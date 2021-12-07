@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateUserForm({ signUpUser }) {
+function CreateUserForm({ signUpUser }) { // TODO: path called signUpUser
     return (
     <div className='Form'>
         <h2>Create Your Account</h2>

@@ -14,7 +14,7 @@ function Header({ logout, loggedIn }) {
 
                     {!loggedIn && (
                         <>
-                            <a href='/'>Login</a>
+                            <a href='/login'>Login</a>
                             <a href='/signup'>Sign Up</a>
                         </>
                     )}

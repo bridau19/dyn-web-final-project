@@ -4,7 +4,7 @@ import SignUpForm from "../components/SignUpForm";
 function SignUp() {
     return (
         <div className="PageWrapper">
-            <h1>Sign Up</h1>
+            <h1>Create User</h1>
             <SignUpForm />
         </div>
     );
