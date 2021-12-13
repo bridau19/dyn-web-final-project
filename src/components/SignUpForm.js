@@ -1,11 +1,11 @@
 import React from "react";
 
-function CreateUserForm({ signUpUser }) { // TODO: path called signUpUser
+function CreateUserForm({ signUpUser }) {
     return (
     <div className='Form'>
         <h2>Create Your Account</h2>
         <form onSubmit={(e) => signUpUser(e)} >
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='displayName'>Name</label>
             <input type='name' name='name' placeholder='Enter Name'/>
 
             <label htmlFor='email'>Email</label>

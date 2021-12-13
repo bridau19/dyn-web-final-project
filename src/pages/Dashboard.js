@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 
 // components
 import Post from "../components/Post";
@@ -14,14 +15,33 @@ export const MOCK_DATA = [
     },  
 ];
 
+const url = `http://localhost:4000`;
+
 function Dashboard() {
+    const [posts, setPosts] = useState([]);
     // display all posts
+
+    useEffect(() => {
+        // get all posts
+            axios
+            .get(url)
+            .then(function(response) {
+                // successful request, set as weather data
+                console.log({response});
+                setPosts(response.data);
+            })
+            .catch(function(error) {
+                // handle error
+                console.warn(error);
+            });
+    }, []);
+
     return (
         <div className="PageWrapper">
-            <h1>My Board</h1>
-            <h2>Bites Off the Block</h2>
-            {MOCK_DATA.map((user, i) => (
-                <Post user={user} key={i} />
+            <h1>My Dashboard</h1>
+            <h2>All Posts</h2>
+            {posts.map((userInformation, i) => (
+                <Post userInformation={userInformation} key={i} />
             ))}
         </div>
     );
