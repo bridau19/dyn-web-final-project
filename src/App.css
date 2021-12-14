@@ -41,7 +41,7 @@ button {
     padding: 1vw;
 }
 
-.Form input {
+.Form input, textarea {
     margin-bottom: 30px;
     padding: 10px 5px;
 }
