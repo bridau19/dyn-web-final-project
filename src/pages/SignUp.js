@@ -13,7 +13,6 @@ function SignUp({setErrors, setLoggedIn, setUserInformation}) {
         const displayName = e.currentTarget.displayName.value;
         const auth = getAuth();
 
-        // TODO: hook up displayName to form
         createUserWithEmailAndPassword(auth, email, password, displayName)
         .then((userCredential) => {
             const user = userCredential.user;

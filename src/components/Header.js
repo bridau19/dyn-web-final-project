@@ -17,7 +17,6 @@ function Header({ logout, loggedIn }) {
                     {loggedIn && (
                         <>
                             <a href='/'>My Board</a>
-                            {/* TODO: pull in user id here */}
                             <a href='/user/:id'>My Profile</a>
                             <a href='/add-post'>Add Post</a>
                             <a href='/about'>About</a>

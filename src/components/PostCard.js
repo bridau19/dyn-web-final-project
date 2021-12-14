@@ -11,7 +11,6 @@ function PostCard({ userInformation }) {
             <div className="PostText">
                 <h2>{userInformation && userInformation.postTitle}</h2>
                 <p>{userInformation && userInformation.postMessage}</p>
-                {/* <p>Posted by: <a href={`/user/${user.userId}`}>{user.username}</a></p> */}
                 <p>Posted by: {userInformation && userInformation.username} </p>
                 <p><a href={`/post/${userInformation && userInformation.id}`}>View Post</a></p>
             </div>

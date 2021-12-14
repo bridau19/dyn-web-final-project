@@ -4,15 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faHeart } from "@fortawesome/free-solid-svg-icons";
 import PostCard from "../components/PostCard";
 
-
-import {MOCK_DATA} from "./Dashboard";
-
-// const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:4000`;
 const url = `http://localhost:4000`;
 
 function UserProfile({ userInformation }) {
   // display all posts by one user
-  
   const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -20,8 +15,7 @@ function UserProfile({ userInformation }) {
           axios
           .get(url)
           .then(function(response) {
-              // successful request, set as weather data
-              //console.log({response});
+              // successful request
               setPosts(response.data);
           })
           .catch(function(error) {
