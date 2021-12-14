@@ -1,4 +1,4 @@
-export default [
+const data = [
 {
     "count": 6, 
     "next": null, 
@@ -505,3 +505,5 @@ export default [
     ]
 }
 ]
+
+export default data;
