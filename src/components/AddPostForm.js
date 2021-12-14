@@ -8,7 +8,11 @@ function AddPostForm({ submitPost }) {
             <input type="text" name="postTitle" placeholder="Enter topic" />
 
             <label htmlFor='postMessage'>Add your thoughts. . .</label>
-            <input type='text' name='postMessage' placeholder='Enter message'/>
+            <textarea
+                type="text"
+                name="postMessage"
+                placeholder="Enter message"
+            ></textarea>
 
             <label htmlFor='imageSrc'>Add an image</label>
             <input 
