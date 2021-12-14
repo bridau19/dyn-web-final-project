@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Post from "../components/Post";
+import PostCard from "../components/PostCard";
 
-const url = `http://localhost:4000`;
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:4000`;
 function Post() {
     const [singlePost, setSinglePost] = useState({})
     let { id } = useParams();
@@ -13,7 +13,7 @@ function Post() {
             axios
             .get(`${url}/post/${id}`)
             .then(function(response) {
-                // successful request, set as weather data
+                // successful request
                 console.log({response});
                 setSinglePost(response.data);
             })
@@ -26,7 +26,7 @@ function Post() {
     return (
         <div className="PageWrapper">
             <h1>Post</h1>
-            <Post post={singlePost} />
+            <PostCard post={singlePost} />
         </div>
     );
 }

@@ -17,7 +17,7 @@ import SignUp from "./pages/SignUp";
 import UserProfile from "./pages/UserProfile";
 import Dashboard from "./pages/Dashboard";
 import AddPost from "./pages/AddPost";
-import Post from "./components/Post";
+import PostCard from "./components/PostCard";
 import Header from "./components/Header";
 import About from "./pages/About";
 import FirebaseConfig from "./components/FirebaseConfig";
@@ -117,7 +117,7 @@ function App() {
           
           <Route 
             path="/post/:id" 
-            element={ loggedIn ? <Post /> : <Navigate to="/login" /> } 
+            element={ loggedIn ? <PostCard /> : <Navigate to="/login" /> } 
           />
 
           <Route 
