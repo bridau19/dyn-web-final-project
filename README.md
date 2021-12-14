@@ -1,18 +1,7 @@
-# Cheese Board
-A social media site for reviewing types of cheese and debating the cultural significance/societal benefits of cheese.
+# The Force Forums
+A social media site for discussing the Star Wars franchise, specifically the early films and their cultural impact.
 
-set up netlify 
-
+## Frontend
+(Netlify)[https://lucid-hawking-46f10e.netlify.app/]
 (Firebase)[https://console.firebase.google.com/project/final-project-f78df/overview]
-
-## Pages/Routes
-exercise 5:
-[] Sign Up
-[] Login
-[] View User Profile (any user profile)
-
-[] Dashboard with all posts
-[] Individual posts 
-[] Add a post
-
-https://console.firebase.google.com/project/final-project-f78df/overview 
+(Star Wars API)[https://pipedream.com/apps/swapi]
