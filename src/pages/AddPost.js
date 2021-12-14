@@ -11,7 +11,6 @@ function AddPost({ userInformation }) {
     function submitPost(e) {
         e.preventDefault();
 
-        const postTitle = e.currentTarget.postTitle.value;
         const postMessage = e.currentTarget.postMessage.value;
         const imageSrc = e.currentTarget.imageSrc.value;
         const imageAlt = e.currentTarget.imageAlt.value;
