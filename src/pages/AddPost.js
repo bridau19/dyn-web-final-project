@@ -11,13 +11,14 @@ function AddPost({ userInformation }) {
     function submitPost(e) {
         e.preventDefault();
 
+        const postTitle = e.currentTarget.postTitle.value;
         const postMessage = e.currentTarget.postMessage.value;
         const imageSrc = e.currentTarget.imageSrc.value;
         const imageAlt = e.currentTarget.imageAlt.value;
         const username = userInformation.displayName;
         const userId = userInformation.uid;
         
-        const url = `${baseUrl}/create?postMessage=${postMessage}&imageSrc=${imageSrc}&imageAlt=${imageAlt}&username=${username}&userId=${userId}`;
+        const url = `${baseUrl}/create?postTitle=${postTitle}postMessage=${postMessage}&imageSrc=${imageSrc}&imageAlt=${imageAlt}&username=${username}&userId=${userId}`;
         axios
             .get(url)
             .then(function(response) {
