@@ -8,18 +8,18 @@ function Header({ logout, loggedIn }) {
                 <nav>
                     {!loggedIn && (
                         <>
-                            <a href='/login'>Login</a>
-                            <a href='/signup'>Create Profile</a>
                             <a href='/about'>About</a>
+                            <a href='/signup'>Create Profile</a>
+                            <a href='/login'>Login</a>
                         </>
                     )}
 
                     {loggedIn && (
                         <>
                             <a href='/'>My Board</a>
-                            <a href='/user/:id'>My Profile</a>
                             <a href='/add-post'>Add Post</a>
                             <a href='/about'>About</a>
+                            <a href='/user/:id'>My Profile</a>
                             <button className="Button" onClick={ () => logout() }>Logout</button>
                         </>
                     )}
