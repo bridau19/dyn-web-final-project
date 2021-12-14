@@ -21,7 +21,9 @@ function Post() {
                 // handle error
                 console.warn(error);
             });
-    }, [id]);
+    }, []);
+
+    if(!singlePost) return null;
 
     return (
         <div className="PageWrapper">

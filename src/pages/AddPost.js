@@ -32,7 +32,7 @@ function AddPost({ userInformation }) {
 
     return (
         <div className="PageWrapper">
-            <h1>Add Post</h1>
+            <h1 className="Title">Create a Post</h1>
 
             <AddPostForm submitPost={submitPost} />
         </div>

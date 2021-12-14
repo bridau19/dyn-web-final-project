@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faHeart } from "@fortawesome/free-solid-svg-icons";
 import PostCard from "../components/PostCard";
 
-const url = `http://localhost:4000`;
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:4000`;
 
 function UserProfile({ userInformation }) {
   // display all posts by one user
@@ -28,16 +28,19 @@ function UserProfile({ userInformation }) {
   return (
     <div className="PageWrapper">
       <FontAwesomeIcon className="Icon" icon={faHeart} /> 
-      <h1> My Profile </h1>
+      <FontAwesomeIcon className="Icon" icon={faHeart} /> 
+      <FontAwesomeIcon className="Icon" icon={faHeart} /> 
+      <h1 className="Title"> My Profile </h1>
       
-      <p>Name: {userInformation.displayName}</p>
       <p>Username: {userInformation.email}</p>
+      <br></br>
       <FontAwesomeIcon className="Icon" icon={faPen} />
-      <h2>  Posts: </h2>
-      {console.log(posts)}
-      {posts.map((user, i) => (
-        <PostCard userInformation={user} key={i} />
-      ))}
+      <h2 className="Title">  Posts: </h2>
+      <div className="PostCardWrap">
+        {posts.map((user, i) => (
+          <PostCard post={user} key={i} />
+        ))}
+      </div>
     </div> 
   );
 }

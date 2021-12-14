@@ -21,6 +21,7 @@ import PostCard from "./components/PostCard";
 import Header from "./components/Header";
 import About from "./pages/About";
 import FirebaseConfig from "./components/FirebaseConfig";
+import Post from "./pages/Post";
 
 function App() {
   // track if user is logged in
@@ -117,7 +118,7 @@ function App() {
           
           <Route 
             path="/post/:id" 
-            element={ loggedIn ? <PostCard /> : <Navigate to="/login" /> } 
+            element={ loggedIn ? <Post /> : <Navigate to="/login" /> } 
           />
 
           <Route 

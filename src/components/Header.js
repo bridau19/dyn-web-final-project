@@ -20,7 +20,7 @@ function Header({ logout, loggedIn }) {
                             <a href='/user/:id'>My Profile</a>
                             <a href='/add-post'>Add Post</a>
                             <a href='/about'>About</a>
-                            <button onClick={ () => logout() }>Logout</button>
+                            <button className="Button" onClick={ () => logout() }>Logout</button>
                         </>
                     )}
                 </nav>

@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import SignUpForm from "../components/SignUpForm";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 
 function SignUp({setErrors, setLoggedIn, setUserInformation}) {
@@ -25,7 +25,18 @@ function SignUp({setErrors, setLoggedIn, setUserInformation}) {
                 accessToken: user.accessToken,
             });
             setErrors();
-        })
+
+            updateProfile(auth.currentUser, {
+                displayName,
+            })
+                .then(() => {
+                    return true;
+                })
+                .catch((error) => {
+                    return setErrors(error.errorMessage);
+                });
+            })
+    
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;

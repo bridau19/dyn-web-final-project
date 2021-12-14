@@ -26,10 +26,11 @@ function Dashboard() {
     return (
         <div className="PageWrapper">
             <h1>My Dashboard</h1>
-            <h2>All Posts</h2>
-            {posts.map((user, i) => (
-                <PostCard userInformation={user} key={i} />
-            ))}
+            <div className="PostCardWrap">
+                {posts.map((user, i) => (
+                    <PostCard post={user} key={i} />
+                ))}
+            </div>
         </div>
     );
 }
